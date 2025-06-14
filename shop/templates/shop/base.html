@@ -6,7 +6,7 @@
     
     
     <link rel="icon" href="{% static 'img/icon.png' %}">
-    <title>{% block title %} BookShop - Online Bookstore| Home{% endblock %} </title>
+    <title>{% block title %} BookShop {% endblock %} </title>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -90,34 +90,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank"><i class="fab fa-facebook-f "></i></a>
-                </li>
-      
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-instagram"></i></a>
-                </li>
                 
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Call us" href="tel:+212677544562"><i class="fas fa-phone"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Contact us" href="bookshop@gmail.com"><i class="far fa-envelope"></i></a>
-                </li>
             </ul>
-            <ul class="navbar-nav md-auto">
-                <h3 style="color:#FF9900
-"><marquee behavior="scroll" direction="left" width="600">We are open! Don’t forget to rate our books!</marquee></h3>
-
-            </ul>
+            
             <ul class="navbar-nav ml-auto">
                 {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -216,9 +191,7 @@
             </ol>
         </div>
     </li>
-    <li class="nav-item">
-        <a class="nav-link recommend-btn btn-13" href="{% url 'shop:recommend' %}" target="_self" style="color: white">Get Recommendations</a>
-    </li>
+    
 {% endif %}
 
               </ul>

@@ -1,0 +1,89 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block content %}
+<style>
+  .about-container {
+    max-width: 900px;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: #f9fdfd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 128, 128, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  .about-container h1 small {
+    color: teal;
+    font-weight: 700;
+  }
+  .about-container p {
+    line-height: 1.6;
+    margin-bottom: 1.2em;
+  }
+  .card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 1.5em;
+  }
+  .card {
+    background: white;
+    border: 2px solid teal;
+    border-radius: 10px;
+    padding: 15px 20px;
+    flex: 1 1 200px; /* minimum width 200px, grow if space */
+    box-shadow: 0 4px 6px rgb(0 128 128 / 0.1);
+    color: teal;
+    font-weight: 600;
+    text-align: center;
+  }
+</style>
+
+<div class="about-container">
+
+  <h1><small>About Us</small></h1>
+  <hr>
+  
+  <p><strong>📖 About Us</strong></p>
+  <p align="justify">
+    Welcome to <strong>BookNest</strong>, your digital corner for discovering and enjoying great books.
+  </p>
+  <p align="justify">
+    Founded in <strong>2023</strong> in <strong>Tangier</strong>, our mission is to make reading more accessible and enjoyable for everyone. We believe that stories have the power to inspire, educate, and connect people — and we’ve created a platform to support that vision.
+  </p>
+
+  <p><strong>💡 What We Offer</strong></p>
+  
+  <div class="card-row">
+    <div class="card">A growing catalog of books across multiple genres</div>
+    <div class="card">Personalized recommendations based on user ratings</div>
+    <div class="card">A smooth and secure online ordering experience</div>
+    <div class="card">A simple and modern interface for both readers and admins</div>
+  </div>
+  
+  <p align="justify">
+    Whether you're searching for a gripping novel, a thought-provoking biography, or a relaxing weekend read, BookNest helps you find exactly what you’re looking for.
+  </p>
+
+  <p><strong>🧑‍💻 Who We Are</strong></p>
+  <p align="justify">
+    We are a small, passionate team of developers and book lovers committed to combining technology and literature. BookNest started as a university project and quickly evolved into a complete web-based bookstore that blends design, functionality, and a love for reading.
+  </p>
+
+  <p><strong>🚀 Our Vision</strong></p>
+  <div class="card-row">
+    <div class="card">Readers can explore, rate, and purchase books easily</div>
+    <div class="card">Admins can manage content with efficiency</div>
+    <div class="card">Everyone can enjoy a personalized, modern reading experience</div>
+  </div>
+
+  <p><strong>📬 Thank you for visiting BookNest.</strong><br>
+  We hope you find stories that stay with you and books that spark new ideas.
+  </p>
+
+</div>
+{% endblock %}

@@ -43,7 +43,9 @@ class Product(models.Model):
 
     class Meta:
         ordering = ('name',)
-        index_together = (('id', 'slug'),)
+        indexes = [
+            models.Index(fields=['id', 'slug']),
+        ]
 
     def __str__(self):
         return self.name
@@ -62,6 +64,8 @@ class Myrating(models.Model):
 
     def get_absolute_url(self):
         return reverse('shop:product_detail', args=[self.id, self.slug])
+
+
 @receiver(pre_delete, sender=Product)
 def delete_related_ratings(sender, instance, **kwargs):
     instance.rated_products.all().delete()
