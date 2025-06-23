@@ -171,26 +171,7 @@
     
                 
                 {% if user.is_authenticated %}
-    <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="avbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">My Account</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <ol class="list-unstyled">
-                <li><a class="nav-link" href="{% url 'profile' %}" style="color:#1499be">Profile</a></li>
-                <li><a class="nav-link" href="{% url 'cart:cart_detail' %}" style="color:#1499be">Shopping Cart:
-                        {% with total_items=cart|length %}
-                            {% if cart|length > 0 %}
-                                {{ total_items }} item{{ total_items|pluralize }}, {{ cart.get_total_price }} MAD
-                            {% else %}
-                                0 products
-                            {% endif %}
-                        {% endwith %}
-                    </a>
-                </li>
-                <li><a href="{% url 'orders:order_create' %}" class="nav-link" style="color:#1499be"> Buy</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}" style="color:#1499be">Log out</a></li>
-            </ol>
-        </div>
-    </li>
+   
     
 {% endif %}
 
